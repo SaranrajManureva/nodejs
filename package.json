@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/SaranrajManureva/nodejs/issues"
   },
-  "homepage": "https://github.com/SaranrajManureva/nodejs#readme"
+  "homepage": "https://github.com/SaranrajManureva/nodejs#readme",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  }
 }
