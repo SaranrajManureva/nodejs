@@ -304,10 +304,12 @@ table.dataTable td {
 }
 .dataTables_wrapper .dataTables_length {
   float: left;
+  display:none;
 }
 .dataTables_wrapper .dataTables_filter {
   float: right;
   text-align: right;
+  display:none;
 }
 .dataTables_wrapper .dataTables_filter input {
   margin-left: 0.5em;

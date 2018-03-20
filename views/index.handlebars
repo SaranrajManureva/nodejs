@@ -1,13 +1,7 @@
-
- <h2 class="page-header">User Authentication Using Node</h2>
-<p>Create user authentication using Node.js, Express.js, Mongoose.js
-and Passport.js with simple application.</p> 
  
  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  
-
-<title>Datatable Demo1 | CoderExample</title>
+   
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
 		<script type="text/javascript" language="javascript" src="js/jquery.js"></script>
@@ -31,14 +25,15 @@ and Passport.js with simple application.</p>
 		</style>
 	</head>
 	<body>
-		<div class="header"><h1>DataTable demo (Server side) in Php,Mysql and Ajax </h1></div>
+		<div class="header"> <h1>Table List</h1> <p  align="right" ><a href="/logout" style="font-family: raleway-bold;">Logout</a><p> </div>
+		
 		<div class="container">
 			<table id="employee-grid"  cellpadding="0" cellspacing="0" border="0" class="display" width="100%">
 					<thead>
 						<tr>
-							<th>Employee name</th>
-							<th>project_title</th>
-							<th>Age</th>
+							<th>Project Title</th>
+							<th>User Name</th>
+							<th>Categories Name</th>
 						</tr>
 					</thead>
 			</table>
@@ -46,9 +41,10 @@ and Passport.js with simple application.</p>
 	</body>
 	
 	<script type="text/javascript" language="javascript" >
-			$(document).ready(function() {
-			alert("test");
+			$(document).ready(function() { 
 				var dataTable = $('#employee-grid').DataTable( {
+				  "iDisplayLength": 2,
+				  "order": [],
 					"processing": true,
 					"serverSide": true,
 					"ajax":{
