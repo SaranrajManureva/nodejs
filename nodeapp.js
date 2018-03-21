@@ -8,8 +8,7 @@ var path 	= require('path');
 var flash	= require('connect-flash');
 db_config = {};
 dbCon = {};
-app = express();
-d='3'
+app = express(); 
 
 const configuration = require('./config/config.js');
 config = new configuration();

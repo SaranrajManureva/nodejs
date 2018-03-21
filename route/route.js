@@ -1,9 +1,12 @@
 router = express.Router(); 
 var md5 = require('md5');
 
+//Logged In user
 router.get('/',logUser, (req, res)=>{
 	res.render('index');
 }); 
+
+//Logout
 router.get('/logout', (req, res) => {
 	
     if (req.session.user) {
@@ -14,6 +17,7 @@ router.get('/logout', (req, res) => {
         res.redirect('/login');
     }
 });
+
 function logUser(req, res, next){
 	console.log(req.session)
 		console.log(req.cookies)
@@ -24,10 +28,13 @@ function logUser(req, res, next){
 		 res.redirect('/login');
 	}
 }
+
+//Login Page
 router.get('/login',(req,res)=>{
 	res.render('login')
 })
 
+//Login Function
 router.post('/login',(req,res)=>{
 	console.log(req.body)
 	console.log(md5(md5("password")+'*YW%Z'))
@@ -54,6 +61,8 @@ router.post('/login',(req,res)=>{
 		});
 	
 })
+
+//Data Table Function
 router.post('/getdata', (req, res)=>{ 
 	    var sortArray = ['ip.project_title','iu.username','ic.categories_name']; 
 		var queryResult1='';
